@@ -266,7 +266,7 @@ static void *kSRCameraViewObserverContext = &kSRCameraViewObserverContext;
 
 - (void)takePhotoWithCompletionBlock:(void (^)(UIImage *, UIImage *))takePhotoCompletionBlock
 {
-	UIImage *(^completionBlock)(UIImage *photo, UIImage *preview) = [takePhotoCompletionBlock copy];
+	void (^completionBlock)(UIImage *photo, UIImage *preview) = [takePhotoCompletionBlock copy];
 	
 	self.paused = YES;
 	
